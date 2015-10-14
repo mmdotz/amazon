@@ -26,7 +26,7 @@ user2.save!
   item = Item.create({
     title: Faker::Book.title,
     desc:  Faker::App.author,
-    inv_qty: 20,
-    price: 5,
+    inv_qty: Faker::Number.number(3),
+    price: Faker::Number.number(2)
   })
 end
