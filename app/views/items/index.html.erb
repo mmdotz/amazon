@@ -1,33 +1,34 @@
 <p id="notice"><%= notice %></p>
-
+<div class="jumbotron">
+  <h1>Welcome</h1>
+</div>
 <h1>Listing Items</h1>
-<div class='row'>
-  <div class='col-md-12'>
-    <section class='items'>
-      <div class='actions'>
-        <div class='row'>
-          <div class='col-md-8'>
-            <table>
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Desc</th>
-                  <th>Price</th>
-                  <th>Quantity in inventory</th>
-                  <th colspan="8"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @items.each do |item| %>
-                  <tr>
-                    <td><%= link_to "#{item.title}", item %></td>
-                    <td><%= item.desc %></td>
-                    <td><%= item.price %></td>
-                    <td><%= item.inv_qty %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+<div class="container">
+  <div class='row'>
+    <div class='col-md-8'>
+      <section class='items'>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Desc</th>
+              <th>Price</th>
+              <th>Quantity in inventory</th>
+              <th colspan="4"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @items.each do |item| %>
+            <tr>
+              <td><%= link_to "#{item.title}", item %></td>
+              <td><%= item.desc %></td>
+              <td><%= item.price %></td>
+              <td><%= item.inv_qty %>
+                <a class="btn btn-info btn-sm" href=/orders/new role="button">Add to order</a></td>
+            </tr>
+              <% end %>
+            </tbody>
+          </table>
           </div>
         </div>
       </div>
@@ -35,8 +36,9 @@
   </div>
 </div>
 
+
 <br>
 <!-- <%# "User logged in: #{current_user.inspect}" if current_user %> -->
 
-<!-- <%# link_to 'New Item', new_item_path %> -->
-<%= link_to 'Place an order', new_order_path %>
+<a class="btn btn-info btn-sm" href=/users role="button">Become a user</a>
+<a class="btn btn-info btn-sm" href=/orders/new role="button">Place an order</a>
