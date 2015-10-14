@@ -5,3 +5,28 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user = User.new({
+  name: "Michelle",
+  email: "hottamale@hotmail.com",
+  admin: true
+})
+user.password = "password"
+user.save!
+
+user2 = User.new({
+  name: "Jayson",
+  email: "peach@hotmail.com",
+  admin: false
+})
+user2.password = "password"
+user2.save!
+
+20.times do
+  item = Item.create({
+    title: Faker::Book.title,
+    desc:  Faker::App.author,
+    inv_qty: 20,
+    price: 5,
+  })
+end
