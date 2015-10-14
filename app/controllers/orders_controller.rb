@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    @user_id = @current_user.id
     @order = Order.new(order_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:item_qty, :paid, :user_id, :item_id)
+      params.require(:order).permit(:user_id)
     end
 end

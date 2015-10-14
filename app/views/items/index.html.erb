@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div class="jumbotron">
-  <h1>Welcome</h1>
-</div>
+
 <h1>Listing Items</h1>
 <div class="container">
   <div class='row'>
@@ -24,7 +22,10 @@
               <td><%= item.desc %></td>
               <td><%= item.price %></td>
               <td><%= item.inv_qty %>
-                <a class="btn btn-info btn-sm" href=/orders/new role="button">Add to order</a></td>
+                <!-- <a class="btn btn-info btn-sm" href=/orders/new role="button">Add to order</a></td> -->
+                <%= link_to('Add To Order', orders_path(@item),
+                  class: 'btn btn-info btn-sm',
+                  method: :POST) %>
             </tr>
               <% end %>
             </tbody>
@@ -39,6 +40,3 @@
 
 <br>
 <!-- <%# "User logged in: #{current_user.inspect}" if current_user %> -->
-
-<a class="btn btn-info btn-sm" href=/users role="button">Become a user</a>
-<a class="btn btn-info btn-sm" href=/orders/new role="button">Place an order</a>
