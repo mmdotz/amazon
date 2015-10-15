@@ -23,9 +23,13 @@
               <td><%= item.price %></td>
               <td><%= item.inv_qty %>
                 <!-- <a class="btn btn-info btn-sm" href=/orders/new role="button">Add to order</a></td> -->
+                <% if current_user != nil %>
                 <%= link_to('Add To Order', lineitems_path(lineitem: { item_id: item.id, qty: 1, order_id: current_user.orders.first.id }),
                   class: 'btn btn-info btn-sm',
                   method: :POST) %>
+                <% else %>
+                <% redirect_to login %>
+                <% end %>
             </tr>
               <% end %>
             </tbody>
