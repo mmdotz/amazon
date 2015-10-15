@@ -18,4 +18,4 @@ To login, create your own account by clicking on "Login or Create new account" o
 ##Supporting documentation
 
 ##UMLS and sketches
-[uml](/theironyard)
+[uml](/theironyard.jpeg)
