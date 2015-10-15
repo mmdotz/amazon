@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
 
+  get 'lineitems/index'
+
+  get 'lineitems/new'
+
+  get 'lineitems/show'
+
+  get 'lineitems/create'
+
+  get 'lineitems/update'
+
+  get 'lineitems/destroy'
+
   resources :orders
   resources :items
   resources :users
