@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   resources :items
   resources :users
 
+  resources :orders do
+    resources :lineitems
+  end
+
+  resources :lineitems do
+    resources :items
+  end
+
   get '/lineitems', to: 'lineitems#index'
   post 	'/lineitems', to: 'lineitems#create'
 
