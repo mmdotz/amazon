@@ -1,28 +1,21 @@
-== README
+#Amazon (Amazontiy)
+##Software information
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-Ruby version 2.2.1
+-Rails version 4.2.4
 
-Things you may want to cover:
+##Description
 
-* Ruby version
+This app is a style of online store like Amazon. Users can view items for sale and add them to an order for checkout. An email confirmation is sent upon successful checkout.
 
-* System dependencies
+Instructions
 
-* Configuration
+To run the app, navigate to `https://amazontiy.herokuapp.com/`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To login, create your own account by clicking on "Login or Create new account" on the home page. This will give you permission to access add items to an order. You do not need an account to browse.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Supporting documentation
+
+##UMLS and sketches
+[uml](/theironyard)
