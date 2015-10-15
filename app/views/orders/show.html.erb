@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Item qty:</strong>
-  <%= @order.item_qty %>
-</p>
+<p> Order id: <%= @order.id %></p>
 
 <p>
   <strong>Paid:</strong>
@@ -12,12 +9,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @order.user %>
-</p>
-
-<p>
-  <strong>Item:</strong>
-  <%= @order.item %>
+  <%= @order.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |

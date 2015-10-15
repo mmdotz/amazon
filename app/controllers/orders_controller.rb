@@ -24,9 +24,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @user_id = current_user.id
-    @order = Order.new(order_params)
-    @order.user_id = @user_id
+    @order = Order.new(user_id: current_user.id)
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
