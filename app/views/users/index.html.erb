@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h1>Listing Users (Admin)</h1>
 
 <table>
   <thead>
@@ -18,7 +18,6 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.admin %></td>
-        <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -27,5 +26,3 @@
 </table>
 
 <br>
-
-<p><a class="btn btn-primary btn-sm" href=/users/new role="button">Create an account</a></p>

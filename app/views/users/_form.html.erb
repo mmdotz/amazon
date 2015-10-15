@@ -19,9 +19,13 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
   <div class="actions">
-    <a class="btn btn-info btn-sm" href=/users/:id role="submit">Create an account</a></td>
+    <!-- <a class="btn btn-info btn-sm" href=/users role="submit">Create an account</a></td> -->
 
-    <!-- <%# f.submit %> -->
+    <%= f.submit %>
   </div>
 <% end %>

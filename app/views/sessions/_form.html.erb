@@ -1,0 +1,12 @@
+
+<h1>Login page</h1>
+  <%= form_tag login_path do %>
+    <p>Username: <%= text_field_tag :name %></p>
+    <p>Password: <%= password_field_tag :password %></p>
+    <p><%= submit_tag "Submit" %></p>
+  <% end %>
+
+<h4>Join now to place an order.</h4>
+
+
+<button name="button"><%= link_to('Add new account', new_user_path) %></button>
