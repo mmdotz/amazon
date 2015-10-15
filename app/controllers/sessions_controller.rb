@@ -8,14 +8,12 @@ class SessionsController < ApplicationController
     @user = User.find_by_name(params[:name])
     if @user.present? && @user.authenticate(params[:password])
       set_user_session(@user)
-      redirect_to posts_path, notice: "Successful log-in"
+      redirect_to items_path, notice: "Successful log-in"
     else
       flash[:alert] = 'Username or password did not match'
       render :new
     end
   end
-
-
 
   def destroy  #logout
     session[:logged_in_users_id] = nil
