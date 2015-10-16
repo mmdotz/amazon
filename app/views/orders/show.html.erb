@@ -14,9 +14,11 @@
 
 <p>
   <strong>You bought:</strong>
-  <% @order.items.each do |item| %>
-  <%= item.title %>
-  <!-- qty: <%# lineitem.qty %> -->
+  <% @order.lineitems.each do |lineitem| %>
+  qty: <%= lineitem.qty %>: <%= lineitem.item.title %> by
+  <%= lineitem.item.desc %>
+
+
   <% end %>
 
 </p>
