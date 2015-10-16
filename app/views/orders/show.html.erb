@@ -13,7 +13,7 @@
 </p>
 
 <p>
-  <strong>You bought:</strong>
+  <strong>You bought:</strong><br>
   <% @order.lineitems.each do |lineitem| %>
   qty: <%= lineitem.qty %>: <%= lineitem.item.title %> by
   <%= lineitem.item.desc %></br>
