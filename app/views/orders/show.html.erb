@@ -12,5 +12,14 @@
   <%= @order.user.name %>
 </p>
 
+<p>
+  <strong>You bought:</strong>
+  <% @order.items.each do |item| %>
+  <%= item.title %>
+  <!-- qty: <%# lineitem.qty %> -->
+  <% end %>
+
+</p>
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
