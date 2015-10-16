@@ -16,7 +16,7 @@
   <strong>You bought:</strong>
   <% @order.lineitems.each do |lineitem| %>
   qty: <%= lineitem.qty %>: <%= lineitem.item.title %> by
-  <%= lineitem.item.desc %>
+  <%= lineitem.item.desc %></br>
 
 
   <% end %>

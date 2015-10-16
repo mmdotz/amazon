@@ -37,6 +37,16 @@ class OrdersController < ApplicationController
     end
   end
 
+  def checkout
+    @order = current_user.current_order
+    @order.paid = true
+    @order.save
+    UserMailer.payment_confirm(current_user)
+    redirect_to root_path
+  end
+
+
+
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update

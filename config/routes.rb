@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get '/lineitems', to: 'lineitems#index'
   post 	'/lineitems', to: 'lineitems#create'
+  patch '/checkout', to: 'orders#checkout', as: 'checkout'
 
   get '/login',       to: 'sessions#new',     as: 'login'
   post '/login',      to: 'sessions#create',  as: 'create_session'
