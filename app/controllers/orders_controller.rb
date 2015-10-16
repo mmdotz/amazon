@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
     @order.paid = true
     @order.save
     UserMailer.payment_confirm(current_user)
-    redirect_to root_path
+    redirect_to root_path, notice: 'Thank you for your order.'
   end
 
 
