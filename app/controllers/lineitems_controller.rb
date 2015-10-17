@@ -14,6 +14,7 @@ class LineitemsController < ApplicationController
 
     respond_to do |format|
       if @lineitem.save
+        @lineitem.item.inv_qty - 1
         format.html { redirect_to items_path, notice: 'Item was added to pending order.' }
         format.json { render :show, status: :created, location: @lineitem }
       else

@@ -1,27 +1,26 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Listing Items</h1>
 <div class="container">
   <div class='row'>
-    <div class='col-md-8'>
       <section class='items'>
         <table>
           <thead>
             <tr>
-              <th>Title</th>
-              <th>Desc</th>
-              <th>Price</th>
-              <th>Qty avail</th>
+              <th class="col-md-4">Title</th>
+              <th class="col-md-4">Desc</th>
+              <th class="col-md-1 col-md-offset-1">Price</th>
+              <th class="col-md-1 col-md-offset-1">Qty avail</th>
               <th colspan="4"></th>
             </tr>
           </thead>
+
           <tbody>
             <% @items.each do |item| %>
             <tr>
-              <td><%= link_to "#{item.title}", item %></td>
-              <td><%= item.desc %></td>
-              <td><%= item.price %></td>
-              <td><%= item.inv_qty %>
+              <td class="col-md-4"><%= link_to "#{item.title}", item %></td>
+              <td class="col-md-4"><%= item.desc %></td>
+              <td class="col-md-1 col-md-offset-1"><%= item.price %></td>
+              <td class="col-md-1 col=md-offset-1"><%= item.inv_qty %>
               <% if current_user && current_user.current_order %>
                 <%= link_to('Add To Order', lineitems_path(lineitem:
                     { item_id: item.id, qty: 1,
