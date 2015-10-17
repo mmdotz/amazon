@@ -1,5 +1,5 @@
 
-<h1>Listing Items</h1>
+<h2>Items in stock:</h2>
 <div class="container">
   <div class='row'>
       <section class='items'>
@@ -22,11 +22,13 @@
               <td class="col-md-1 col-md-offset-1"><%= item.price %></td>
               <td class="col-md-1 col=md-offset-1"><%= item.inv_qty %>
               <% if current_user && current_user.current_order %>
+              <td class="col-md-1 col=md-offset-1">
                 <%= link_to('Add To Order', lineitems_path(lineitem:
                     { item_id: item.id, qty: 1,
                     order_id: current_user.current_order.id }),
-                    class: 'btn btn-info btn-sm',
+                    class: 'btn btn-info btn-xs',
                     method: :POST) %>
+                  </td>
               <% end %>
               <% end %>
               </tr>
