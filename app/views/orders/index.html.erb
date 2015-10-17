@@ -4,8 +4,9 @@
 <table>
   <thead>
     <tr>
-      <th>Paid</th>
-      <th>User</th>
+      <th class="col-md-2">Order #</th>
+      <th class="col-md-2">Paid</th>
+      <th class="col-md-2">User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,10 +14,11 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.paid %></td>
-        <td><%= order.user.name %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="col-md-2"><%= order.id %></td>
+        <td class="col-md-2"><%= order.paid %></td>
+        <td class="col-md-2"><%= order.user.name %></td>
+        <td class="btn btn-info btn-xs"><%= link_to 'View detail', order %></td>
+        <td class="btn btn-info btn-xs"><%= link_to 'Delete order', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
