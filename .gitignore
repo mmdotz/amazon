@@ -11,6 +11,9 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< HEAD
 
 # Ignore application configuration
 /config/application.yml
+=======
+>>>>>>> upstream/master

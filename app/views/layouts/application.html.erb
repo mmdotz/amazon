@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
   <title>Amazon</title>
+=======
+  <title>Schedlr</title>
+>>>>>>> upstream/master
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< HEAD
   <div class="jumbotron">
     <h3>Welcome to our shop</h4>
       <p>This site was designed using bootstrap</p>
@@ -32,4 +37,10 @@
   <% end %>
 </footer>
 <%= "User logged in: #{current_user.name}, Admin: #{current_user.admin}" if current_user %>
+=======
+
+<%= yield %>
+
+</body>
+>>>>>>> upstream/master
 </html>

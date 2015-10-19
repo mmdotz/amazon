@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'notifications@example.com'
+  default from: 'dotzenrodm@gmail.com'
 
   def payment_confirm(user)
     @user = user

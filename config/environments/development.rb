@@ -1,5 +1,8 @@
 Rails.application.configure do
+<<<<<<< HEAD
   config.action_mailer.delivery_method= :mandrill
+=======
+>>>>>>> upstream/master
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
