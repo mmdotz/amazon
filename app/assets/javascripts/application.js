@@ -13,10 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-<<<<<<< HEAD
 //= require react
 //= require react_ujs
 //= require components
-=======
->>>>>>> upstream/master
 //= require_tree .

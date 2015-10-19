@@ -5,7 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-<<<<<<< HEAD
 
 user = User.new({
   name: "Michelle",
@@ -31,5 +30,3 @@ user2.save!
     price: Faker::Number.number(2)
   })
 end
-=======
->>>>>>> upstream/master
