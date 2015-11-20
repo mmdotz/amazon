@@ -1,8 +1,10 @@
 #Amazon (Amazonishmmdotz)
 ##Software information
 
--Ruby version 2.2.1
--Rails version 4.2.4
+- Ruby version 2.2.1
+- Rails version 4.2.4
+- Mandrill messaging with MailChimp
+
 
 ##Description
 
@@ -22,6 +24,5 @@ To see admin-only features, login as `Michelle`, password: `password`.
 
 
 ##Supporting documentation
-
-##UMLS and sketches
-[uml](/theironyard.jpeg)
+UMLs and sketches
+[UMLs](/theironyard.jpeg)
