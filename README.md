@@ -1,4 +1,4 @@
-#Amazon (Amazontiy)
+#Amazon (Amazonishmmdotz)
 ##Software information
 
 -Ruby version 2.2.1
@@ -12,7 +12,7 @@ successful checkout.
 
 Instructions
 
-To run the app, navigate to `https://amazontiy.herokuapp.com/`
+To run the app, navigate to `https://amazonishmmdotz.herokuapp.com/`
 
 To login, create your own account by clicking on `Login or Create new account`
 on the home page. This will give you permission to access add items to an order.
