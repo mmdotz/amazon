@@ -7,10 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="jumbotron">
     <h3>Welcome to our shop</h4>
       <p>This site was designed using bootstrap</p>
-  </div>
   <p id="notice"><%= notice %></p>
   <div class="container">
       <%= yield %>
@@ -19,19 +17,25 @@
 <footer class="navigation">
   <% if current_user %>
     <% if current_user.has_no_current_order? %> <!--if user has no pending orders -->
-    <%= link_to 'Open a new order', orders_path, method: :POST, class: "btn btn-info btn-sm" %>
+    <%= link_to 'Open a new order', items_path, method: :POST, class: "btn btn-info btn-sm" %>
     <% else %>
     <%= link_to 'Checkout', checkout_path, method: :PATCH, class: "btn btn-info btn-sm" %>
-    <%= link_to 'View current order', order_path(current_user.orders.first), class: 'btn btn-info btn-sm' %>
+      <% unless controller_name == 'orders' && action_name == 'show' %>
+      <%= link_to 'View current order', order_path(current_user.orders.first), class: 'btn btn-info btn-sm' %>
+      <% end %>
     <% end %>
   <% end %>
   <% if current_user && current_user.admin? %>
     <%= link_to 'View all orders', orders_path, class: 'btn btn-info btn-sm' %>
     <%= link_to 'List of Users', users_path, class: 'btn btn-info btn-sm' %><br>
-    <a class="btn btn-info btn-sm" href=/items role="button">Home</a>
-    <a class="btn btn-info btn-sm" href=/login role="button">Login or Create an account</a>
+    <% end %>
+
+    <a class="btn btn-info btn-sm" href=/items role="button">Items for Sale</a>
+    <% if user_logged_in? %>
     <a class="btn btn-info btn-sm" href=/logout role="button">Logout</a>
-  <% end %>
+    <% else %>
+    <a class="btn btn-info btn-sm" href=/login role="button">Login or Create an account</a>
+    <% end %>
 </footer>
 <%= "User logged in: #{current_user.name}, Admin: #{current_user.admin}" if current_user %>
 </html>
