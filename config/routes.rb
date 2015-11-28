@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :items
   end
 
+  get '/404', to: 'errors#error404'
   get '/lineitems', to: 'lineitems#index'
   post 	'/lineitems', to: 'lineitems#create'
   patch '/checkout', to: 'orders#checkout', as: 'checkout'
