@@ -1,6 +1,5 @@
-<h1>Editing <%= "#{@order.user.name}'s" %> Order</h1>
+<h3><%= "#{@order.user.name}'s" %> Order, would you like to edit?</h3>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Back', @order %>

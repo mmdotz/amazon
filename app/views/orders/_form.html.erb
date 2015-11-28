@@ -12,10 +12,12 @@
   <% end %>
 
 
+<% if current_user.admin? %>
   <div class="field">
     <%= f.label :paid %><br>
     <%= f.check_box :paid %>
   </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
