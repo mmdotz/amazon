@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <section id="order_print">
+      <div class="order_text">
+        <h3>
+          <strong>Order <%= @order.id %> for <%= @order.user.name %> </strong>
+        </h3>
+
+        <p>
+          <strong>Paid:</strong>
+          <%= @order.paid %>
+        </p>
+
+        <h4>
+            <strong>You bought:</strong><br>
+          <ol>
+          <% @order.lineitems.each do |lineitem| %>
+            <li> <%= lineitem.item.title %> by <%= lineitem.item.desc %>
+              qty: <%= lineitem.qty %> price: $<%= lineitem.item.price %></li>
+
+          <% end %>
+          <ol>
+        </h4>
+      </div>
+    </section>
+  </div>
+  <%= link_to 'Edit', edit_order_path(@order), class: "btn btn-info btn-sm" %> |
+  <%= link_to 'Back', orders_path, class: "btn btn-info btn-sm" %>
+</div>
