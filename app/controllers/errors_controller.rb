@@ -1,5 +1,9 @@
 class ErrorsController < ApplicationController
-  def error404
-    render status: :not_found
+  def not_found
+    respond_to do |format|
+      format.html { render status: 404}
+    end
+  rescue ActionController::UnknownFormat
+    render status: 404, text: "nope"
   end
 end

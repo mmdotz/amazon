@@ -12,14 +12,15 @@ Rails.application.routes.draw do
     resources :items
   end
 
-  get '/404', to: 'errors#error404'
-  get '/lineitems', to: 'lineitems#index'
   post 	'/lineitems', to: 'lineitems#create'
-  patch '/checkout', to: 'orders#checkout', as: 'checkout'
+  patch '/checkout',  to: 'orders#checkout', as: 'checkout'
 
-  get '/login',       to: 'sessions#new',     as: 'login'
-  post '/login',      to: 'sessions#create',  as: 'create_session'
-  get '/logout',   to: 'sessions#destroy', as: 'logout'
+  get '/login',   to: 'sessions#new',     as: 'login'
+  post '/login',  to: 'sessions#create',  as: 'create_session'
+  get '/logout',  to: 'sessions#destroy', as: 'logout'
+  #errors must be last rule
+  get "*any", via: :all, to: "errors#not_found"
+
 
 
   root "sessions#new"

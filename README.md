@@ -1,9 +1,10 @@
 #Amazon (Amazonishmmdotz)
-##Software information
+##Software information and features for practice
 
 - Ruby version 2.2.1
 - Rails version 4.2.4
 - Mandrill messaging with MailChimp
+- Error handling with custom 404 page
 
 
 ##Description
