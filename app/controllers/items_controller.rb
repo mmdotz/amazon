@@ -53,15 +53,9 @@ class ItemsController < ApplicationController
     end
   end
 
-  # DELETE /items/1
-  # DELETE /items/1.json
-  def destroy
-    @item.destroy
-    respond_to do |format|
-      format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # because lineitems holds an item FK, and we don't want to delete items from
+  #past orders, item#destroy is unavailable.
+  # item#destroy here
 
   private
     # Use callbacks to share common setup or constraints between actions.
