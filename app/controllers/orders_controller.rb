@@ -6,8 +6,6 @@ class OrdersController < ApplicationController
   def index
     if current_user.admin
       @orders = Order.all
-    else
-      redirect_to @order
     end
   end
 
