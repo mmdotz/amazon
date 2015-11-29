@@ -19,7 +19,7 @@
           <% @order.lineitems.each do |lineitem| %>
             <li> <%= lineitem.item.title %> by <%= lineitem.item.desc %>
               qty: <%= lineitem.qty %> price: $<%= lineitem.item.price %>
-              <%= link_to 'Delete lineitem', lineitem, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Delete lineitem', lineitem, method: :delete, data: { confirm: 'Are you sure?' } unless @order.paid? %>
               </li>
           <% end %>
           <% end %>

@@ -1,4 +1,6 @@
 class LineitemsController < ApplicationController
+  before_action :set_lineitem, only: [:show, :edit, :update, :destroy]
+
   def index
     @lineitems = Lineitem.all
   end
@@ -47,7 +49,8 @@ class LineitemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_lineitem
-      @lineitem = lineitems.find(params[:id])
+      @lineitems = Lineitem.all
+      @lineitem = @lineitems.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
