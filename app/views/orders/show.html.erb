@@ -10,7 +10,9 @@
           <strong>Paid:</strong>
           <%= @order.paid %>
         </p>
-
+        <% if @order.lineitems.empty? %>
+          <h3>Please return to Items page, you haven't added to your order.</h3>
+        <% else %>
         <h4>
             <strong>You bought:</strong><br>
           <ol>
@@ -19,8 +21,7 @@
               qty: <%= lineitem.qty %> price: $<%= lineitem.item.price %>
               <%= link_to 'Delete lineitem', lineitem, method: :delete, data: { confirm: 'Are you sure?' } %>
               </li>
-
-
+          <% end %>
           <% end %>
           <ol>
         </h4>
