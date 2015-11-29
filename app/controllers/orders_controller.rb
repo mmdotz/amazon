@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
     end
   end
 
-  def checkout
+  def checkout #added extra layer of insurance that empty orders do not checkout
     @order = current_user.current_order
     if @order.lineitems.empty?
       redirect_to @order, notice: 'No items in order for checkout. Please add to your order.'
