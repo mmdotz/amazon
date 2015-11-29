@@ -43,10 +43,16 @@ class OrdersController < ApplicationController
 
   def checkout
     @order = current_user.current_order
-    @order.paid = true
-    @order.save
-    UserMailer.payment_confirm(current_user, @order).deliver_now
-    redirect_to root_path, notice: 'Thank you for your order.'
+    if @order.lineitems.empty?
+      redirect_to @order, notice: 'No items in order for checkout. Please add to your order.'
+    else
+      @order.paid = true
+      @order.save
+      UserMailer.payment_confirm(current_user, @order).deliver_now
+      redirect_to root_path, notice: 'Thank you for your order.'
+    end
+
+
   end
 
 
