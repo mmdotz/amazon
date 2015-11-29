@@ -80,23 +80,7 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
-  #
-  # private
-  #   def create_order_from_session_cart
-  #     cart  = SessionCart.new(session)
-  #     order = Order.new
-  #     cart.item_ids.each do |id|
-  #       # I don't need to supply the order_id below, because I am creating this
-  #       # Lineitem "through" the relation, so rails sets that up for you.
-  #       order.lineitems.create(
-  #         item_id: id,
-  #         quantity: 1
-  #       )
-  #     end
-  #     if order.save
-  #       order
-  #     end
-  #   end
+
 
     # Use callbacks to share common setup or constraints between actions.
     def set_order

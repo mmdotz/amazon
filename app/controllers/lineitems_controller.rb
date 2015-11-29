@@ -39,7 +39,7 @@ class LineitemsController < ApplicationController
   def destroy
     @lineitem.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to current_user.current_order, notice: 'Lineitem was removed from your order.' }
       format.json { head :no_content }
     end
   end
